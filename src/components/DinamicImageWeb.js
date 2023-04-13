@@ -22,7 +22,7 @@ const margin = 1;
 //   color: '#1da398',
 // };
 
-export default function DinamicImage() {
+export default function DinamicImageWeb() {
   const [personalText, setPersonalText] = useState();
   const [readyToWrite, setReadyToWrite] = useState(false);
   const textToDisplay = "שתפו ותייגו #מדליקים_נר"
@@ -86,7 +86,7 @@ export default function DinamicImage() {
             flexDirection: 'column',
             alignItems: 'center',
             bgcolor: '#f4edd5',
-            mb: margin,
+            // mb: margin,
           }}
         >
           <Image

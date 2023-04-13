@@ -3,8 +3,9 @@ import Box from '@mui/system/Box';
 import { isMobile, isAndroid } from 'react-device-detect';
 import AssistantFont from './fonts/AssistantFont';
 import MoreInfo from './components/MoreInfo';
-import DinamicImage from './components/DinamicImage';
+import DinamicImageWeb from './components/DinamicImageWeb';
 import AndroidWebView from './components/AndroidWebView';
+import DinamicImageMob from './components/DinamicImageMob';
 
 const margin = 1;
 const maxWid = isMobile ? null : '340px';
@@ -24,14 +25,13 @@ function App() {
           bgcolor: '#f4edd5',
         }}
         maxWidth={maxWid}
-
       >
         {(isAndroid && isWebView) ?
           // for Android web view clients here
           <AndroidWebView />
           : <>
-            <DinamicImage />
-            <MoreInfo />
+            { <DinamicImageMob/>}
+            {/* <MoreInfo /> */}
           </>}
       </Box>
 
