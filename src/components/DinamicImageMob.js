@@ -4,6 +4,7 @@ import {
     IconButton,
     Typography,
 } from '@mui/material';
+import Container from '@mui/material/Container';
 import Image from 'mui-image';
 import React, { useState, useRef } from 'react';
 import candle_header from '../מדליקים נר - יום השואה.jpg';
@@ -23,19 +24,67 @@ export default function DinamicImageMob() {
 
     return (
         <>
-            {/* <Typography
-                style={{
-                    fontFamily: 'Assistant',
-                    color: '#1da398',
-                }}
-                gutterBottom
-                variant="h6"
-                component="div"
-            >
-                {
-                    'הצטרפו לאלפי אנשים המדליקים נרות ומחבקים את משפחת השכול האזרחי'
-                }
-            </Typography> */}
+            <Container
+                sx={{
+                    pr: 6
+                }}>
+                <Box
+                    display="flex"
+                    flexDirection="row-reverse"
+                    justifyContent="center">
+                    <Box
+                        display="flex"
+                        flexDirection="column-reverse"
+                        justifyContent="flex-end"
+                        sx={{ alignItems: 'right', my: 1 }}
+                    >
+                        <Typography
+                            sx={{ mb: 0, }}
+                            style={{
+                                fontFamily: 'Assistant',
+                                color: 'rgb(217 217 217)',
+                              
+                            }}
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                        >
+                            {
+
+                                'לזכור את השואה, להנציח את הנספים'
+                            }
+                        </Typography>
+                        {/* <Typography
+                            style={{
+                                fontFamily: 'Assistant',
+                                // color: '#000000',
+                            }}
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                        >
+                            {
+                                'לזכור את השואה'
+                            }
+                        </Typography> */}
+                        <Typography
+                            style={{
+                                fontFamily: 'Assistant',
+                                color: 'rgb(217 217 217)',
+                            }}
+                            sx={{ mb: 0, }}
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                        >
+
+                            {
+                                'הצטרפו והדליקו נר'
+                            }
+                        </Typography>
+                    </Box>
+                </Box>
+            </Container>
             <Box display="flex" flexDirection="row-reverse">
                 <Box
                     display="flex"
@@ -45,14 +94,18 @@ export default function DinamicImageMob() {
                     <ShareButton />
                     <IconButton
                         onClick={focusTextInput}
-                        color="primary"
+                        color='#f6cf17'
                         aria-label="write"
                         size="large"
                         sx={{
                             py: 1, pl: 1, pr: 0,
                         }}
                     >
-                        <Avatar sx={{ bgcolor: '#1976d2' }}>
+                        <Avatar
+                            sx={{
+                                bgcolor: '#f6cf17',
+                                color: 'rgba(0, 0, 0, 0.87)'
+                            }}>
                             <CreateIcon />
                         </Avatar>
                     </IconButton>
@@ -61,8 +114,10 @@ export default function DinamicImageMob() {
                     sx={{ mb: margin }}
                 />
                 <Box
-                    borderColor='rgba(0, 0, 0, 0.87)'
-                    sx={{ border: 2 }}
+                    style={{
+                        borderColor: 'rgb(217 217 217)'
+                    }}
+                    sx={{ border: 2, }}
                 >
                     <div id="print">
                         <Box
@@ -70,7 +125,7 @@ export default function DinamicImageMob() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
-                                bgcolor: '#f4edd5',
+                                bgcolor: '#f6cf17',
                             }}
                         >
                             <Image

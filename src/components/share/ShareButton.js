@@ -17,7 +17,10 @@ export default function ShareButton(props) {
         sx={{ py: 1, pl: 1, pr: 0 }}
       >
         <Avatar
-          sx={{ bgcolor: '#1976d2' }}
+          sx={{
+            bgcolor: '#f6cf17',
+            color: 'rgba(0, 0, 0, 0.87)'
+          }}
         >
           <ShareIcon />
         </Avatar>
@@ -39,7 +42,10 @@ export default function ShareButton(props) {
         sx={{ py: 1, pl: 1, pr: 0 }}
       >
         <Avatar
-          sx={{ bgcolor: '#1976d2' }}
+          sx={{
+            bgcolor: '#f6cf17',
+            color: 'rgba(0, 0, 0, 0.87)'
+          }}
         >
           <FileDownloadIcon />
         </Avatar>

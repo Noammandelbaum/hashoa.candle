@@ -6,7 +6,7 @@ export default async function onDownload() {
   const data = canvas.toDataURL('image/jpg');
   const link = document.createElement('a');
   link.href = data;
-  link.download = 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg';
+  link.download = 'נר זיכרון.jpg';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

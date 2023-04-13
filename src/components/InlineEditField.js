@@ -60,7 +60,7 @@ function MultilineEdit({ value, setValue, textInputRef }) {
                     lineHeight: 1.235,
                     letterSpacing: '0.00735em',
                     fontFamily: 'Assistant',
-                    color: 'rgb(29, 163, 152)',
+                    color: '#000000',
                 }
             }}
             sx={{

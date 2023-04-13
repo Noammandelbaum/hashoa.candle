@@ -3,7 +3,6 @@ import Box from '@mui/system/Box';
 import { isMobile, isAndroid } from 'react-device-detect';
 import AssistantFont from './fonts/AssistantFont';
 import MoreInfo from './components/MoreInfo';
-import DinamicImageWeb from './components/DinamicImageWeb';
 import AndroidWebView from './components/AndroidWebView';
 import DinamicImageMob from './components/DinamicImageMob';
 
@@ -22,16 +21,17 @@ function App() {
           flexDirection: 'column',
           alignItems: 'center',
           m: margin,
-          bgcolor: '#f4edd5',
+          bgcolor: '#005C99',
         }}
         maxWidth={maxWid}
       >
         {(isAndroid && isWebView) ?
           // for Android web view clients here
           <AndroidWebView />
-          : <>
-            { <DinamicImageMob/>}
-            {/* <MoreInfo /> */}
+          :
+          <>
+            <DinamicImageMob />
+            <MoreInfo />
           </>}
       </Box>
 

@@ -3,23 +3,23 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "candle-yakir",
+      "src": "מדליקים נר - יום השואה",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "candle-yakir",
+      "src": "מדליקים נר - יום השואה",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "candle-yakir",
+      "src": "מדליקים נר - יום השואה",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#f4edd5",
-  "background_color": "#f4edd5"
+  "theme_color": "#005C99",
+  "background_color": "#005C99"
 }

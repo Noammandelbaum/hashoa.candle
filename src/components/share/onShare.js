@@ -7,11 +7,11 @@ export default async function onShare() {
   const data = canvas.toDataURL('image/jpg');
   const response = await fetch(data);
   const blob = await response.blob();
-  const filesArray = [new File([blob], 'מדליקים נר בשבוע המודעות לשכול האזרחי.jpg', { type: 'image/jpeg', lastModified: new Date().getTime() })];
+  const filesArray = [new File([blob], 'נר זיכרון.jpg', { type: 'image/jpeg', lastModified: new Date().getTime() })];
   const shareData = {
     files: filesArray,
   };
-  if (!isIOS) { shareData.text = 'https://noammandelbaum.github.io/virtual.candle/\n#מדליקים_נר'; }
+  if (!isIOS) { shareData.text = 'https://hashoabneiakiva.vercel.app/'; }
   navigator.share(shareData).then(() => {
   });
 }
