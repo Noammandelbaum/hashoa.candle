@@ -1,7 +1,7 @@
 import './App.css';
 import Box from '@mui/system/Box';
 import { isMobile, isAndroid } from 'react-device-detect';
-import AssistantFont from './fonts/AssistantFont';
+import RubicFont from './fonts/RubicFont';
 import MoreInfo from './components/MoreInfo';
 import AndroidWebView from './components/AndroidWebView';
 import DinamicImageMob from './components/DinamicImageMob';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
 
-      <AssistantFont />
+      <RubicFont />
       <Box
         sx={{
           display: 'flex',

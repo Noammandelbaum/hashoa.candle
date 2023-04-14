@@ -1,13 +1,12 @@
 import { Box, Link, Typography } from '@mui/material';
 import Container from '@mui/material/Container';
-import './MoreInfo.css'
 const margin = 3;
 
 export default function MoreInfo() {
   return (
     <Container
       sx={{
-        pr: 6
+        pr: 7, pl: 0
       }}>
       <Box
         sx={{
@@ -23,12 +22,14 @@ export default function MoreInfo() {
           justifyContent="flex-end"
           sx={{ mr: 3 }}
         />
-        <Box className="Info">
+        <Box
+        // className="Info"
+        >
           <Typography
             variant="h8"
             component="div"
             style={{
-              color: 'rgb(217 217 217)',
+              color: '#ffffff',
             }}
           >
             {"מצטרפים ומדליקים נר"}
@@ -37,30 +38,30 @@ export default function MoreInfo() {
             variant="h8"
             component="div"
             style={{
-              color: 'rgb(217 217 217)',
+              color: '#ffffff',
             }}
           >
-            {"כדי לזכור את אלה שאינם ♡"}
+            {"• כדי לזכור את אלה שאינם"}
           </Typography>
           <Typography
             variant="h8"
             component="div"
             style={{
-              color: 'rgb(217 217 217)',
+              color: '#ffffff',
             }}
 
           >
-            {"ממשיכים לפעול להנצחת זכרון השואה ♡"}
+            {"• ממשיכים לפעול להנצחת זכרון השואה"}
           </Typography>
           <Typography
             variant="h8"
             component="div"
             sx={{ mb: margin }}
             style={{
-              color: 'rgb(217 217 217)',
+              color: '#ffffff',
             }}
           >
-            {`נר ועוד נר לחיבור גדול ♡`}
+            {`• נר ועוד נר לחיבור גדול`}
           </Typography>
         </Box>
         {/* <Link sx={{ mb: 1 }}

@@ -3,11 +3,11 @@
   top: 0px;
   right: 0px;
   left: 0px;
-  text-align: center;
   align-items: center;
+  direction: rtl;
   height: 100%;
   width: 100%;
-  font-family: 'Assistant';
+  font-family: 'Rubik', sans-serif;
   background-color: #005C99;
   margin-left: auto;
   margin-right: auto;

@@ -1,15 +1,15 @@
-textarea {
+/* textarea {
     resize: none;
     overflow: hidden;
     min-height: 14px;
-    /* max-height: 100px; */
-}
+    max-height: 100px;
+} */
 input:hover {
     background-color: #d3d3d3;
     cursor: pointer;
 }
 input {
-    background-color: transparent;
+    /* background-color: transparent; */
     border: 0;
     padding: 8px;
 }

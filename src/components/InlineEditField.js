@@ -1,12 +1,13 @@
-import { InputBase, TextField } from "@mui/material";
+import { InputBase, TextField, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import './InlineEditField.css';
 
-const defaultMessage = "חללי השואה האיומה"
+const defaultMessage = "ששת המליונים"
 
-function MultilineEdit({ value, setValue, textInputRef }) {
-    
+function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
+
     const [editingValue, setEditingValue] = useState(defaultMessage);
+
 
     const onChange = (event) => setEditingValue(event.target.value);
 
@@ -24,6 +25,7 @@ function MultilineEdit({ value, setValue, textInputRef }) {
     //     }
     // };
     const onBlur = (event) => {
+        setInputStat(false);
         if (event.target.value.trim() === "") {
             setEditingValue(defaultMessage);
         } else {
@@ -32,10 +34,10 @@ function MultilineEdit({ value, setValue, textInputRef }) {
     }
 
     const onFocus = (event) => {
+        setInputStat(true);
         console.log(event.target.value);
         if (event.target.value === defaultMessage)
             setEditingValue("");
-        
     };
 
     // const textareaRef = useRef();
@@ -44,39 +46,68 @@ function MultilineEdit({ value, setValue, textInputRef }) {
     // }, [onInput, textareaRef]);
 
     return (
-        <InputBase
-            onChange={onChange}
-            onBlur={onBlur}
-            onKeyDown={onKeyDown}
-            onFocus={onFocus}
-            inputProps={{
-                maxLength: 40,
-                // maxRows: 3,
-                direction: 'rtl',
-                style: {
-                    textAlign: 'center',
-                    fontWeight: 400,
-                    fontSize: '2.125rem',
-                    lineHeight: 1.235,
-                    letterSpacing: '0.00735em',
-                    fontFamily: 'Assistant',
-                    color: '#000000',
-                }
-            }}
-            sx={{
-                mb: 3,
-            }}
-            variant="outlined"
-            multiline
-            fullWidth            
-            value={editingValue}
-            id="mui-theme-provider-input"
-            inputRef={textInputRef}
-        />
+        <>
+            {inputStat ?
+                <InputBase
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    onKeyDown={onKeyDown}
+                    onFocus={onFocus}
+                    autoFocus
+                    inputProps={{
+                        maxLength: 40,
+                        // maxRows: 3,
+                        direction: 'rtl',
+                        style: {
+                            textAlign: 'center',
+                            fontWeight: 400,
+                            fontSize: '2.125rem',
+                            lineHeight: 1.235,
+                            letterSpacing: '0.00735em',
+                            fontFamily: 'Rubik, sans-serif',
+                            color: '#000000',
+                        }
+
+                    }}
+                    sx={{
+                        mb: 3,
+
+                    }}
+                    variant="outlined"
+                    multiline
+                    fullWidth
+                    value={editingValue}
+                    id="mui-theme-provider-input"
+                // inputRef={textInputRef}
+                />
+                :
+                <Typography
+                    style={{
+                        fontFamily: 'Rubik, sans-serif',
+                        color: '#000000',
+                    }}
+                    sx={{mb:4}}
+                    gutterBottom
+                    variant="h4"
+                    component="div"
+                >
+                    {editingValue}
+                </Typography>
+            }
+        </>
     );
 };
 
-export default function InlineEditField({ textInputRef }) {
+export default function InlineEditField({ inputStat, setInputStat }) {
     const [value, setValue] = useState();
-    return <MultilineEdit value={value} setValue={setValue} textInputRef={textInputRef} />
+    return (
+        <MultilineEdit
+            value={value}
+            setValue={setValue}
+            // textInputRef={textInputRef}
+            inputStat={inputStat}
+            setInputStat={setInputStat}
+
+        />
+    )
 }

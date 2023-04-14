@@ -11,89 +11,96 @@ import candle_header from '../מדליקים נר - יום השואה.jpg';
 import ShareButton from './share/ShareButton';
 import InlineEditField from './InlineEditField';
 import CreateIcon from '@mui/icons-material/Create';
+import { isMobile } from 'react-device-detect';
+
 
 const margin = 1;
 
 export default function DinamicImageMob() {
     // const [personalText, setPersonalText] = useState('');
     // const [readyToWrite, setReadyToWrite] = useState(false);
-    const textInputRef = React.createRef();
-    const focusTextInput = () => {
-        textInputRef.current.focus();
-    };
+    const [inputStat, setInputStat] = useState(false);
+    // const textInputRef = React.createRef();
+    // const focusTextInput = () => {
+    //     textInputRef.current.focus();
+    // };
 
     return (
         <>
-            <Container
-                sx={{
-                    pr: 6
-                }}>
+            <Container sx={{ pr: 6, pl: 1, mb: 1 }}>
                 <Box
-                    display="flex"
-                    flexDirection="row-reverse"
-                    justifyContent="center">
+                // display="flex"
+                // flexDirection="row-reverse"
+                // justifyContent="center"
+                >
+
                     <Box
-                        display="flex"
-                        flexDirection="column-reverse"
-                        justifyContent="flex-end"
+                        // display="flex-end"
+                        // flexDirection="column-reverse"
+                        // justifyContent="flex-end"
+                        // alignItems="right"
                         sx={{ alignItems: 'right', my: 1 }}
                     >
                         <Typography
-                            sx={{ mb: 0, }}
                             style={{
-                                fontFamily: 'Assistant',
-                                color: 'rgb(217 217 217)',
-                              
+                                fontFamily: 'Rubik, sans-serif',
+                                color: '#ffffff',
                             }}
-                            gutterBottom
                             variant="h6"
                             component="div"
+                            textAlign="center"
                         >
                             {
-
-                                'לזכור את השואה, להנציח את הנספים'
+                                `"נר ה' נשמת אדם"`
                             }
                         </Typography>
-                        {/* <Typography
-                            style={{
-                                fontFamily: 'Assistant',
-                                // color: '#000000',
-                            }}
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                        >
-                            {
-                                'לזכור את השואה'
-                            }
-                        </Typography> */}
-                        <Typography
-                            style={{
-                                fontFamily: 'Assistant',
-                                color: 'rgb(217 217 217)',
-                            }}
-                            sx={{ mb: 0, }}
-                            gutterBottom
-                            variant="h6"
-                            component="div"
-                        >
-
-                            {
-                                'הצטרפו והדליקו נר'
-                            }
-                        </Typography>
+                        {/* <Container> */}
+                        <Box
+                        sx={{}}>
+                            <Typography
+                                style={{
+                                    fontFamily: 'Rubik, sans-serif',
+                                    color: '#ffffff',
+                                    fontSize: 'inherit',
+                                }}
+                                // gutterBottom
+                                variant="h6"
+                                component="div"
+                            >
+                                {
+                                    'מרכז ישיבות ואולפנות בני עקיבא מזמין אתכם להשתתף במיזם להנצחת קורבנות השואה. בדור בו הולכים ומתמעטים שורדי השואה מונחת על כתפינו לזכור ולא לשכוח, ולשתף עם בני המשפחה וחברים את אור הזיכרון.'
+                                }
+                            </Typography>
+                            <Typography
+                                style={{
+                                    fontFamily: 'Rubik, sans-serif',
+                                    color: '#ffffff',
+                                    fontSize: 'inherit',
+                                }}
+                                // gutterBottom
+                                variant="h6"
+                                component="div"
+                            >
+                                {
+                                    'ניתן להקדיש את הנר לזכר קרובי משפחה, קהילות, דמויות או נר כללי.'}
+                            </Typography>
+                        </Box>
                     </Box>
                 </Box>
             </Container>
-            <Box display="flex" flexDirection="row-reverse">
+
+            <Box
+                display="flex" flexDirection="row"
+            >
                 <Box
-                    display="flex"
-                    flexDirection="column-reverse"
-                    justifyContent="flex-end"
+
+                // display="flex"
+                // flexDirection="column-reverse"
+                // justifyContent="flex-end"
                 >
                     <ShareButton />
                     <IconButton
-                        onClick={focusTextInput}
+                        onClick={() => setInputStat(true)}
                         color='#f6cf17'
                         aria-label="write"
                         size="large"
@@ -110,9 +117,7 @@ export default function DinamicImageMob() {
                         </Avatar>
                     </IconButton>
                 </Box>
-                <Box
-                    sx={{ mb: margin }}
-                />
+
                 <Box
                     style={{
                         borderColor: 'rgb(217 217 217)'
@@ -137,9 +142,14 @@ export default function DinamicImageMob() {
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     mx: 2,
+                                    bgcolor: '#f6cf17',
                                 }}
                             >
-                                <InlineEditField textInputRef={textInputRef} />
+                                <InlineEditField
+                                    // textInputRef={textInputRef}
+                                    inputStat={inputStat}
+                                    setInputStat={setInputStat}
+                                />
                             </Box>
                         </Box>
                     </div>

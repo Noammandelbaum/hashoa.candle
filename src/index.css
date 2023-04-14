@@ -1,12 +1,12 @@
 html{
-  background-color: #f4edd5;
+  background-color: #005C99;
 }
 body {
   margin: 0;
-  font-family: 'Assistant';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f4edd5;
+  font-family: 'Rubik', sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  background-color: #005C99;
 }
 
 code {
