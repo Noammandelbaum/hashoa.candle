@@ -56,12 +56,21 @@ export default function MoreInfo() {
           <Typography
             variant="h8"
             component="div"
-            sx={{ mb: margin }}
             style={{
               color: '#ffffff',
             }}
           >
             {`• נר ועוד נר לחיבור גדול`}
+          </Typography>
+          <Typography
+            variant="h8"
+            component="div"
+            sx={{ mb: margin }}
+            style={{
+              color: '#ffffff',
+            }}
+          >
+            {`• להוספת שם לחצו על סימן העיפרון מימין`}
           </Typography>
         </Box>
         {/* <Link sx={{ mb: 1 }}

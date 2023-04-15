@@ -11,11 +11,6 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
 
     const onChange = (event) => setEditingValue(event.target.value);
 
-    const onKeyDown = (event) => {
-        if (event.key === "Enter" || event.key === "Escape") {
-            event.target.blur();
-        }
-    };
 
     // const onBlur = (event) => {
     //     if (event.target.value.trim() === "") {
@@ -51,7 +46,6 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
                 <InputBase
                     onChange={onChange}
                     onBlur={onBlur}
-                    onKeyDown={onKeyDown}
                     onFocus={onFocus}
                     autoFocus
                     inputProps={{
@@ -82,11 +76,12 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
                 />
                 :
                 <Typography
+                    onClick={() => { setInputStat(true); }}
                     style={{
                         fontFamily: 'Rubik, sans-serif',
                         color: '#000000',
                     }}
-                    sx={{mb:4}}
+                    sx={{ mb: 4 }}
                     gutterBottom
                     variant="h4"
                     component="div"

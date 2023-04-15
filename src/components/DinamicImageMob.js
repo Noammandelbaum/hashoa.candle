@@ -28,17 +28,8 @@ export default function DinamicImageMob() {
     return (
         <>
             <Container sx={{ pr: 6, pl: 1, mb: 1 }}>
-                <Box
-                // display="flex"
-                // flexDirection="row-reverse"
-                // justifyContent="center"
-                >
-
+                <Box>
                     <Box
-                        // display="flex-end"
-                        // flexDirection="column-reverse"
-                        // justifyContent="flex-end"
-                        // alignItems="right"
                         sx={{ alignItems: 'right', my: 1 }}
                     >
                         <Typography
@@ -56,7 +47,7 @@ export default function DinamicImageMob() {
                         </Typography>
                         {/* <Container> */}
                         <Box
-                        sx={{}}>
+                        >
                             <Typography
                                 style={{
                                     fontFamily: 'Rubik, sans-serif',
@@ -82,7 +73,19 @@ export default function DinamicImageMob() {
                                 component="div"
                             >
                                 {
-                                    'ניתן להקדיש את הנר לזכר קרובי משפחה, קהילות, דמויות או נר כללי.'}
+                                    'אנו מבקשים להקדיש את הנר לזכר קרובי משפחה, קהילות, דמויות או נר כללי.'}
+                            </Typography>
+                            <Typography
+                                style={{
+                                    fontFamily: 'Rubik, sans-serif',
+                                    color: '#ffffff',
+                                    fontSize: 'inherit',
+                                }}
+                                // gutterBottom
+                                variant="h6"
+                                component="div"
+                            >
+                                {'בררו אצל ההורים על קרוב או אחר שנספה בשואה, הוסיפו את שמו והדליקו נר לזכרו/ה.'}
                             </Typography>
                         </Box>
                     </Box>
@@ -90,17 +93,17 @@ export default function DinamicImageMob() {
             </Container>
 
             <Box
-                display="flex" flexDirection="row"
+                display="flex"
+                flexDirection="row"
             >
                 <Box
-
-                // display="flex"
-                // flexDirection="column-reverse"
-                // justifyContent="flex-end"
+                    display="flex"
+                    flexDirection="column-reverse"
+                    justifyContent="flex-end"
                 >
                     <ShareButton />
                     <IconButton
-                        onClick={() => setInputStat(true)}
+                        onClick={() => !inputStat && setInputStat(true)}
                         color='#f6cf17'
                         aria-label="write"
                         size="large"
@@ -146,7 +149,6 @@ export default function DinamicImageMob() {
                                 }}
                             >
                                 <InlineEditField
-                                    // textInputRef={textInputRef}
                                     inputStat={inputStat}
                                     setInputStat={setInputStat}
                                 />
