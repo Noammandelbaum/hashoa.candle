@@ -10,9 +10,8 @@ export default function Header() {
         <Container sx={{ pr: 7, pl: 1, mb: 1 }}>
             <Box>
                 <Box
-                    sx={{ alignItems: 'right', my: 1, }}
+                    sx={{ alignItems: 'right', my: 1, textAlignLast:"center" }}
                     textAlign="justify"
-                    textalignlast="center"
                 >
                     <Typography
                         style={{
