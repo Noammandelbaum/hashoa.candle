@@ -4,12 +4,13 @@ import { Avatar, Button, IconButton } from '@mui/material';
 import { isMobile } from 'react-device-detect';
 import onShare from './onShare';
 import onDownload from './onDownload';
+import React from 'react';
 
 export default function ShareButton(props) {
 
   return (
     isMobile ?
-      <IconButton
+      <IconButton className='plausible-event-name=לחצו+על+כפתור+שיתוף'
         aria-label="share"
         size="large"
         onClick={onShare}
@@ -26,15 +27,7 @@ export default function ShareButton(props) {
         </Avatar>
       </IconButton>
       :
-      // <Button
-      //   sx={{ mt: 1 }}
-      //   fullWidth
-      //   variant="outlined"
-      //   size="large" onClick={onDownload}
-      //   endIcon={<FileDownloadIcon />}>
-      //   {props.textToDisplay}
-      // </Button>
-      <IconButton
+      <IconButton className='plausible-event-name=לחצו+על+כפתור+הורדה'
         onClick={onDownload}
         aria-label="share"
         size="large"
@@ -50,7 +43,5 @@ export default function ShareButton(props) {
           <FileDownloadIcon />
         </Avatar>
       </IconButton>
-
-
   );
 }
