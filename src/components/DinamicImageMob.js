@@ -4,94 +4,19 @@ import {
     IconButton,
     Typography,
 } from '@mui/material';
-import Container from '@mui/material/Container';
 import Image from 'mui-image';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import candle_header from '../מדליקים נר - יום השואה.jpg';
 import ShareButton from './share/ShareButton';
 import InlineEditField from './InlineEditField';
 import CreateIcon from '@mui/icons-material/Create';
 import { isMobile } from 'react-device-detect';
 
-
-const margin = 1;
-
 export default function DinamicImageMob() {
-    // const [personalText, setPersonalText] = useState('');
-    // const [readyToWrite, setReadyToWrite] = useState(false);
     const [inputStat, setInputStat] = useState(false);
-    // const textInputRef = React.createRef();
-    // const focusTextInput = () => {
-    //     textInputRef.current.focus();
-    // };
 
     return (
         <>
-            <Container sx={{ pr: 6, pl: 1, mb: 1 }}>
-                <Box>
-                    <Box
-                        sx={{ alignItems: 'right', my: 1 }}
-                    >
-                        <Typography
-                            style={{
-                                fontFamily: 'Rubik, sans-serif',
-                                color: '#ffffff',
-                            }}
-                            variant="h6"
-                            component="div"
-                            textAlign="center"
-                        >
-                            {
-                                `"נר ה' נשמת אדם"`
-                            }
-                        </Typography>
-                        {/* <Container> */}
-                        <Box
-                        >
-                            <Typography
-                                style={{
-                                    fontFamily: 'Rubik, sans-serif',
-                                    color: '#ffffff',
-                                    fontSize: 'inherit',
-                                }}
-                                // gutterBottom
-                                variant="h6"
-                                component="div"
-                            >
-                                {
-                                    'מרכז ישיבות ואולפנות בני עקיבא מזמין אתכם להשתתף במיזם להנצחת קורבנות השואה. בדור בו הולכים ומתמעטים שורדי השואה מונחת על כתפינו לזכור ולא לשכוח, ולשתף עם בני המשפחה וחברים את אור הזיכרון.'
-                                }
-                            </Typography>
-                            <Typography
-                                style={{
-                                    fontFamily: 'Rubik, sans-serif',
-                                    color: '#ffffff',
-                                    fontSize: 'inherit',
-                                }}
-                                // gutterBottom
-                                variant="h6"
-                                component="div"
-                            >
-                                {
-                                    'אנו מבקשים להקדיש את הנר לזכר קרובי משפחה, קהילות, דמויות או נר כללי.'}
-                            </Typography>
-                            <Typography
-                                style={{
-                                    fontFamily: 'Rubik, sans-serif',
-                                    color: '#ffffff',
-                                    fontSize: 'inherit',
-                                }}
-                                // gutterBottom
-                                variant="h6"
-                                component="div"
-                            >
-                                {'בררו אצל ההורים על קרוב או אחר שנספה בשואה, הוסיפו את שמו והדליקו נר לזכרו/ה.'}
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Box>
-            </Container>
-
             <Box
                 display="flex"
                 flexDirection="row"
@@ -103,7 +28,7 @@ export default function DinamicImageMob() {
                 >
                     <ShareButton />
                     <IconButton
-                        onClick={() => !inputStat && setInputStat(true)}
+                        onClick={() => setInputStat(!inputStat)}
                         color='#f6cf17'
                         aria-label="write"
                         size="large"
@@ -123,7 +48,7 @@ export default function DinamicImageMob() {
 
                 <Box
                     style={{
-                        borderColor: 'rgb(217 217 217)'
+                        borderColor: '#ffffff'
                     }}
                     sx={{ border: 2, }}
                 >

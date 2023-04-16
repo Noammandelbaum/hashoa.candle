@@ -1,3 +1,4 @@
+import './AndroidWebView.css';
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from 'react';
@@ -9,33 +10,35 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function AndroidWebView() {
     const [isCopied, setIsCopied] = useState(false);
-    const textToCopy = "https://noammandelbaum.github.io/virtual.candle/";
-
-    // function copyURL() {
-    //     navigator.clipboard.writeText(textToCopy)
-    //         .then(() => {
-    //             setIsCopied(false);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error copying text to clipboard:', error);
-    //         });
-    // }
+    const textToCopy = 'https://hashoabneiakiva.vercel.app/';
 
     return (
         <>
+
             <Box
                 sx={{ mt: 10 }}
-            />
-            <Typography
-                variant="h8"
             >
-                ,לצערנו האתר אינו נתמך על ידי פייסבוק
-            </Typography>
-            <Typography
-                variant="h8"
-            >
-                {".נא לעבור לדפדפן הרגיל (גוגל) ולהדביק את הקישור"}
-            </Typography>
+                <Typography
+                    component="div"
+                    variant="h8"
+                    style={{
+                        fontFamily: 'Rubik, sans-serif',
+                        color: '#ffffff',
+                    }}
+                >
+                    {"לצערנו האתר אינו נתמך על ידי פייסבוק/אינסטגרם,"}
+                </Typography>
+                <Typography
+                    component="div"
+                    variant="h8"
+                    style={{
+                        fontFamily: 'Rubik, sans-serif',
+                        color: '#ffffff',
+                    }}
+                >
+                    {"נא לעבור לדפדפן הרגיל (גוגל) ולהדביק את הקישור."}
+                </Typography>
+            </Box>
             <Box
                 sx={{ mt: 2 }}
             />
@@ -45,22 +48,36 @@ export default function AndroidWebView() {
                         text={textToCopy}
                         onCopy={() => setIsCopied(true)}>
                         <Button
+                            style={{
+                                fontFamily: 'Rubik, sans-serif',
+                                color: '#ffffff',
+                            }}
+                            sx={{
+                                "& .MuiButton-startIcon": { marginRight: "0px", marginLeft: "4px" }
+                            }}
                             fullWidth
                             variant="contained"
                             size="large"
-                            endIcon={<ContentCopyIcon />}>
-                            להעתקת קישור האתר
+                            startIcon={<ContentCopyIcon />}>
+                            {"להעתקת קישור האתר"}
                         </Button>
                     </CopyToClipboard>
 
                 </>
                 :
                 <Button
+                    style={{
+                        fontFamily: 'Rubik, sans-serif',
+                        color: '#ffffff',
+                    }}
+                    sx={{
+                        "& .MuiButton-startIcon": { marginRight: "0px", marginLeft: "4px" }
+                    }}
                     fullWidth
                     variant="contained"
                     size="large"
-                    endIcon={<CheckIcon />}>
-                    הקישור הועתק בהצלחה
+                    startIcon={<CheckIcon />}>
+                    {"הקישור הועתק בהצלחה"}
                 </Button>
             }
 

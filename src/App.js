@@ -5,6 +5,7 @@ import RubicFont from './fonts/RubicFont';
 import MoreInfo from './components/MoreInfo';
 import AndroidWebView from './components/AndroidWebView';
 import DinamicImageMob from './components/DinamicImageMob';
+import Header from './components/Header';
 
 const margin = 1;
 const maxWid = isMobile ? null : '340px';
@@ -30,6 +31,7 @@ function App() {
           <AndroidWebView />
           :
           <>
+            <Header/>
             <DinamicImageMob />
             <MoreInfo />
           </>}

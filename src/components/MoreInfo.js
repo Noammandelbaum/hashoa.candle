@@ -22,9 +22,7 @@ export default function MoreInfo() {
           justifyContent="flex-end"
           sx={{ mr: 3 }}
         />
-        <Box
-        // className="Info"
-        >
+        <Box       >
           <Typography
             variant="h8"
             component="div"
@@ -32,7 +30,7 @@ export default function MoreInfo() {
               color: '#ffffff',
             }}
           >
-            {"מצטרפים ומדליקים נר"}
+            {"מצטרפים ומדליקים נר:"}
           </Typography>
           <Typography
             variant="h8"
