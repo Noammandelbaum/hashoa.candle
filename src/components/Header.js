@@ -7,10 +7,15 @@ import React from 'react';
 
 export default function Header() {
     return (
-        <Container sx={{ pr: 7, pl: 1, mb: 1 }}>
+        <Container sx={{
+            pr: 7, pl: 1, mb: 1,
+            '@media (min-width: 600px)': {
+                pr: 7, pl: 1, mb: 1,
+            }
+        }}>
             <Box>
                 <Box
-                    sx={{ alignItems: 'right', my: 1, textAlignLast:"center" }}
+                    sx={{ alignItems: 'right', my: 1, textAlignLast: "center" }}
                     textAlign="justify"
                 >
                     <Typography

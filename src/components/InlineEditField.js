@@ -1,5 +1,5 @@
-import { InputBase, TextField, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { InputBase, Typography } from "@mui/material";
+import { useState } from "react";
 
 const defaultMessage = "ששת המליונים"
 
@@ -10,14 +10,6 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
 
     const onChange = (event) => setEditingValue(event.target.value);
 
-
-    // const onBlur = (event) => {
-    //     if (event.target.value.trim() === "") {
-    //         setValue(defaultMessage);
-    //     } else {
-    //         setValue(event.target.value);
-    //     }
-    // };
     const onBlur = (event) => {
         setInputStat(false);
         if (event.target.value.trim() === "") {
@@ -29,15 +21,9 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
 
     const onFocus = (event) => {
         setInputStat(true);
-        console.log(event.target.value);
         if (event.target.value === defaultMessage)
             setEditingValue("");
     };
-
-    // const textareaRef = useRef();
-    // useEffect(() => {
-    //     onInput(textareaRef.current);
-    // }, [onInput, textareaRef]);
 
     return (
         <>
@@ -49,7 +35,6 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
                     autoFocus
                     inputProps={{
                         maxLength: 40,
-                        // maxRows: 3,
                         direction: 'rtl',
                         style: {
                             textAlign: 'center',
@@ -71,7 +56,6 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
                     fullWidth
                     value={editingValue}
                     id="mui-theme-provider-input"
-                // inputRef={textInputRef}
                 />
                 :
                 <Typography
@@ -98,7 +82,6 @@ export default function InlineEditField({ inputStat, setInputStat }) {
         <MultilineEdit
             value={value}
             setValue={setValue}
-            // textInputRef={textInputRef}
             inputStat={inputStat}
             setInputStat={setInputStat}
 

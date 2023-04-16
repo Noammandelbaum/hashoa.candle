@@ -22,6 +22,7 @@ function App() {
           flexDirection: 'column',
           alignItems: 'center',
           m: margin,
+          ml:2,
           bgcolor: '#005C99',
         }}
         maxWidth={maxWid}

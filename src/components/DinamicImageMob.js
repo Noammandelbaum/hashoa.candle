@@ -28,7 +28,9 @@ export default function DinamicImageMob() {
                 >
                     <ShareButton />
                     <IconButton
-                        onClick={() => setInputStat(!inputStat)}
+                        onClick={() => {
+                            setInputStat(!(inputStat));
+                        }}
                         color='#f6cf17'
                         aria-label="write"
                         size="large"

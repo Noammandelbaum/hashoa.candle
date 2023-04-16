@@ -6,7 +6,10 @@ export default function MoreInfo() {
   return (
     <Container
       sx={{
-        pr: 7, pl: 0
+        pr: 7, pl: 0,
+        '@media (min-width: 600px)': {
+          pr: 7, pl: 1,
+        }
       }}>
       <Box
         sx={{
