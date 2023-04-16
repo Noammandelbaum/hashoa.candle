@@ -10,7 +10,7 @@ export default function ShareButton(props) {
 
   return (
     isMobile ?
-      <IconButton className='plausible-event-name=לחצו+על+כפתור+שיתוף'
+      <IconButton className='plausible-event-name=Share+button'
         aria-label="share"
         size="large"
         onClick={onShare}
@@ -27,7 +27,7 @@ export default function ShareButton(props) {
         </Avatar>
       </IconButton>
       :
-      <IconButton className='plausible-event-name=לחצו+על+כפתור+הורדה'
+      <IconButton className='plausible-event-name=Download+button'
         onClick={onDownload}
         aria-label="share"
         size="large"
