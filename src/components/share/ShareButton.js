@@ -6,11 +6,11 @@ import onShare from './onShare';
 import onDownload from './onDownload';
 import React from 'react';
 
-export default function ShareButton(props) {
+export default function ShareButton() {
 
   return (
     isMobile ?
-      <IconButton className='plausible-event-name=Share+button'
+      <IconButton className='plausible-event-name=Share+Button'
         aria-label="share"
         size="large"
         onClick={onShare}
@@ -27,7 +27,7 @@ export default function ShareButton(props) {
         </Avatar>
       </IconButton>
       :
-      <IconButton className='plausible-event-name=Download+button'
+      <IconButton className='plausible-event-name=Download+Button'
         onClick={onDownload}
         aria-label="share"
         size="large"
