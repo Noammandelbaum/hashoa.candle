@@ -5,12 +5,16 @@ const margin = 3;
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props} >
-      {'פיתוח האתר - '}
-      <Link color="inherit" onClick={() => window.location = 'mailto:noam.mandelbaum@gmail.com'}>
+      
+      <Link
+        color="inherit"
+        onClick={() => window.location = 'mailto:noam.mandelbaum@gmail.com'}>
+        {'פיתוח האתר - '}
         {'נעם מנדלבאום'}
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+        {' '}
+        {new Date().getFullYear()}
+      </Link>
+
     </Typography>
   );
 }
@@ -91,8 +95,10 @@ export default function MoreInfo() {
 
         </Box>
       </Container>
-      <Divider flexItem sx={{ mr: -1, ml: -2 }} />
-      <Copyright sx={{ mt: 4, mb: 4 }} />
+      {/* <Divider flexItem sx={{ mr: -1, ml: -2 }} /> */}
+      <Copyright
+        sx={{ mt: 4 }}
+      />
     </>
   );
 }
