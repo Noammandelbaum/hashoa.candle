@@ -11,7 +11,9 @@ export default async function onShare() {
   const shareData = {
     files: filesArray,
   };
-  if (!isIOS) { shareData.text = 'https://hashoabneiakiva.vercel.app/'; }
+  if (!isIOS) {
+    shareData.text = 'להדלקת נר:\nhttps://hashoabneiakiva.vercel.app/';
+  }
   navigator.share(shareData).then(() => {
   });
 }
