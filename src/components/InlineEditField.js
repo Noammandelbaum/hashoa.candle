@@ -59,6 +59,7 @@ function MultilineEdit({ value, setValue, inputStat, setInputStat }) {
                 />
                 :
                 <Typography
+                    textAlign="center"
                     onClick={() => { setInputStat(true); }}
                     style={{
                         fontFamily: 'Rubik, sans-serif',
