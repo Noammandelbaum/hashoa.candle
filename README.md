@@ -8,3 +8,4 @@ The website 'Virtual Holocaust Day Candle' allows you to design yourself a memor
 - Front site, based on 'React-Web-Application'.
 - Uses on 'Material-UI' for the design of the components. 
 - Uses 'html2canvas' library for converting the components to an image.
+- Deployment on 'Vercel' service.
